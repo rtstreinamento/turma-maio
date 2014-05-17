@@ -5,15 +5,15 @@ Funcionalidade: Pesquisar Produto
   Para facilitar a compra de um produto
   Quero pesquisar um produto na loja
 
-  @validação
+  @exceção
   Cenário: Pesquisar pelo nome completo
     Dado que eu tenha um produto cadastrado
-    Quando eu pesquiso por "Senhor dos Aneis - As Duas Torres"
+    Quando eu pesquiso por "Thor"
     Então visualizo o resultado da pesquisa
 
 
 
-  @validação @execuçãoManual
+  @validação
   Cenário: Pesquisar por parte do nome
     Dado que eu tenha dois filmes com pelo menos uma palavra igual
     Quando eu pesquiso por "Aneis"
