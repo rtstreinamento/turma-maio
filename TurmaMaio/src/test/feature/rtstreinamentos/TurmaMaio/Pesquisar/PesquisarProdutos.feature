@@ -11,9 +11,6 @@ Funcionalidade: Pesquisar Produto
     Quando eu pesquiso por "Thor"
     Então visualizo o resultado da pesquisa
 
-
-
-#Teste commit
   @validação
   Cenário: Pesquisar por parte do nome
     Dado que eu tenha dois filmes com pelo menos uma palavra igual
