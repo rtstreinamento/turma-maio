@@ -11,6 +11,8 @@ Funcionalidade: Pesquisar Produto
     Quando eu pesquiso por "Senhor dos Aneis - As Duas Torres"
     Então visualizo o resultado da pesquisa
 
+
+
   @validação @execuçãoManual
   Cenário: Pesquisar por parte do nome
     Dado que eu tenha dois filmes com pelo menos uma palavra igual
