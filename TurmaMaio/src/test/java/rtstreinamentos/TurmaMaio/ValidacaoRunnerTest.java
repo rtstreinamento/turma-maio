@@ -6,8 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags={"@validação","~@execuçãoManual"})
+@CucumberOptions(tags = { "@validação", "~@execuçãoManual" }, format = { "json:target/cucumber.json" })
 public class ValidacaoRunnerTest {
 
-	
 }

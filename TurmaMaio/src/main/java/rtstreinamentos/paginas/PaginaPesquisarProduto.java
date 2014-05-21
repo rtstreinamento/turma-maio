@@ -3,21 +3,14 @@ package rtstreinamentos.paginas;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
-public class PaginaPesquisarProduto {
+public class PaginaPesquisarProduto extends Pagina {
 
-	WebDriver driver;
 	public PaginaPesquisarProduto() {
-		System.setProperty("webdriver.chrome.driver",	"c:\\web-drivers\\chromedriver.exe");
-		System.setProperty("phantom.binary.path",	"c:\\web-drivers\\phantomjs.exe");
-		
-		//driver = new ChromeDriver();
-		driver = new PhantomJSDriver();
+		abrirBrowser();
 		driver.get("http://tghcastro.lojaintegrada.com.br/");
+
 	}
 	public WebElement obterListaDeFilmes() {
 		
@@ -31,19 +24,15 @@ public class PaginaPesquisarProduto {
 		caixaPesquisa.sendKeys(nomeFilme);
 		
 	}
-	public void clicarBotaoPesquisa() {
-		WebElement botaoPesquisa = driver.findElement(By
-				.xpath("//*[@id=\"form-buscar\"]/button"));
+	public ResultadoPesquisa clicarBotaoPesquisa() {
+		WebElement botaoPesquisa = driver.findElement(By.xpath("//*[@id=\"form-buscar\"]/button"));
 		botaoPesquisa.click();
+		return new ResultadoPesquisa();
 		
 
 	}
 	
-	public String verResultadoPesquisa () {
-		String filmeAtual = driver.findElement(By.className("nome-produto"))
-				.getText();
-		return filmeAtual;
-	}
+	
 	
 	public List<WebElement> listarTodosFilmesCapa (){
 		List<WebElement> ListaDeFilmes = driver.findElements(By
